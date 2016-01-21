@@ -1,0 +1,88 @@
+#include "cstdlib"
+#include "fstream"
+
+/*Problem
+
+You receive a credit C at a local store and would like to buy two items. You first walk through the store and create a list L of all available items. From this list you would like to buy two items that add up to the entire value of the credit. The solution you provide will consist of the two integers indicating the positions of the items in your list (smaller number first).
+
+Input
+
+The first line of input gives the number of cases, N. N test cases follow. For each test case there will be:
+
+One line containing the value C, the amount of credit you have at the store.
+One line containing the value I, the number of items in the store.
+One line containing a space separated list of I integers. Each integer P indicates the price of an item in the store.
+Each test case will have exactly one solution.
+Output
+
+For each test case, output one line containing "Case #x: " followed by the indices of the two items whose price adds up to the store credit. The lower index should be output first.
+
+Input 
+3 // 3 cases follow
+100 // desired sum
+3 // length of item array
+5 75 25 // item array
+200 // desired ...
+7
+150 24 79 50 88 345 3
+8
+8
+2 1 9 4 4 56 90 3
+
+Output 
+Case #1: 2 3
+Case #2: 1 4
+Case #3: 4 5
+*/
+
+struct Node {
+    int i;
+    int val;
+};
+
+class L
+{
+public:
+    L (int length);
+    virtual ~L ();
+    bool insert(Node newNode);
+    void quickSort();
+    bool findC(int c);
+
+private:
+    int maxLen;
+    int len;
+    Node * l;
+};
+
+L::L(int length) {
+    l = new Node[length];
+    maxLen = length;
+    len = 0;
+}
+
+L::~L() {
+    delete [] l;
+}
+
+L::insert(Node newNode) {
+    bool success = false;
+    
+    node[len] = newNode;
+    success = true;
+
+    return success;
+}
+
+L::quickSort() {
+
+}
+L::findC(int c) {
+
+}
+
+int main(int argc, char *argv[])
+{
+    
+    return 0;
+}
