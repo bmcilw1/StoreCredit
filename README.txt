@@ -1,4 +1,4 @@
-Correct!
+Google Code Jam Solution
 
 Problem
 
@@ -12,6 +12,7 @@ One line containing the value C, the amount of credit you have at the store.
 One line containing the value I, the number of items in the store.
 One line containing a space separated list of I integers. Each integer P indicates the price of an item in the store.
 Each test case will have exactly one solution.
+
 Output
 
 For each test case, output one line containing "Case #x: " followed by the indices of the two items whose price adds up to the store credit. The lower index should be output first.
