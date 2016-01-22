@@ -1,4 +1,4 @@
-#!/usr/bin python
+#!/usr/bin/python
 
 from __future__ import print_function
 import sys
@@ -6,7 +6,6 @@ import sys
 def main():
     filename = sys.argv[1]
     f = open(filename, 'rU')
-    out = open("out.txt", 'w')
     cases = int(f.readline())
 
     for case in range(1, cases + 1):
@@ -21,10 +20,9 @@ def main():
         for i in range(numItems):
             key = credit - itemsList[i]
             if key in itemsDict and itemsDict[key] != i + 1:
-                print("Case #" + str(case) + ": " + str(i + 1) + " " + str(itemsDict[key]), file=out)
+                print("Case #" + str(case) + ": " + str(i + 1) + " " + str(itemsDict[key]))
                 break
 
-    out.close()
     f.close()
 
 # Standard boilerplate to call the main() function to begin
