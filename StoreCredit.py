@@ -15,7 +15,7 @@ def main():
 
         itemsDict = {}
         for i in range(1, numItems + 1):
-            itemsDict.update({itemsList[i - 1]:i})
+            itemsDict[itemsList[i - 1]] = i
 
         for i in range(numItems):
             key = credit - itemsList[i]
@@ -25,7 +25,5 @@ def main():
 
     f.close()
 
-# Standard boilerplate to call the main() function to begin
-# the program.
 if __name__ == '__main__':
     main()
